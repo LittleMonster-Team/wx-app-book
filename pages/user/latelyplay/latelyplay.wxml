@@ -1,0 +1,52 @@
+<view>
+  <view class='rowstyle'>
+    <text class='storytext'>今天</text>
+  </view>
+  <block wx:for="{{todayBookList}}" wx:key="item">
+    <view class="rowstyle2"  data-id="{{item.book.id}}" bindtap="redirectToDetails">
+      <image src="{{item.book.bookCover}}" class="mustlistenimage" />
+      <view class="columnstyle">
+        <text class="mustlistentitle">{{item.book.bookName}}</text>
+        <text class="mustlistenintroduce">{{item.book.bookSynopsis}}</text>
+        <view>
+          <text class="mustlistenchapter" decode="{{true}}">第一章：捡到一个拇指姑娘</text>
+          <text class="mustlistenchapter2" decode="{{true}}">已播70%</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class='rowstyle'>
+    <text class='storytext'>昨天</text>
+  </view>
+  <block wx:for="{{yesterdayBookList}}" wx:key="item">
+    <view class="rowstyle2" data-id="{{item.book.id}}" bindtap="redirectToDetails">
+      <image src="{{item.book.bookCover}}" class="mustlistenimage" />
+      <view class="columnstyle">
+        <text class="mustlistentitle">{{item.book.bookName}}</text>
+        <text class="mustlistenintroduce">{{item.book.bookSynopsis}}</text>
+        <view>
+          <text class="mustlistenchapter" decode="{{true}}">第一章：捡到一个拇指姑娘</text>
+          <text class="mustlistenchapter2" decode="{{true}}">已播70%</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class='rowstyle'>
+    <text class='storytext'>更早</text>
+  </view>
+  <block wx:for="{{earlierBookList}}" wx:key="item">
+    <view class="rowstyle2" data-id="{{item.book.id}}" bindtap="redirectToDetails">
+      <image src="{{item.book.bookCover}}" class="mustlistenimage" />
+      <view class="columnstyle">
+        <text class="mustlistentitle">{{item.book.bookName}}</text>
+        <text class="mustlistenintroduce">{{item.book.bookSynopsis}}</text>
+        <view>
+          <text class="mustlistenchapter" decode="{{true}}">第一章：捡到一个拇指姑娘</text>
+          <text class="mustlistenchapter2" decode="{{true}}">已播70%</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

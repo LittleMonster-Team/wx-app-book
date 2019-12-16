@@ -1,0 +1,96 @@
+.sections {
+  margin-top: 40rpx;
+}
+
+.section {
+  background: #fff;
+  margin-bottom: 20rpx;
+  margin-top: 10rpx;
+  padding: 20rpx;
+  display: flex;
+  /* border: 2rpx solid#000; */
+  flex-direction: row;
+  align-items: center;
+}
+
+.sectionimage {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 40rpx;
+}
+
+.sectiontext {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+
+.timage {
+  position: absolute;
+  right: 40rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.switchstyle {
+  position: absolute;
+  right: 40rpx;
+  zoom: 0.6;
+}
+
+.textstyle {
+  font-size: 30rpx;
+  position: absolute;
+  right: 90rpx;
+  color: #666;
+}
+
+.bindingstyle {
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 80rpx;
+  color: #000;
+  height: 50rpx;
+  width: 160rpx;
+  background-color: #ddd;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+.bindingstyle2 {
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 80rpx;
+  color: #000;
+  height: 50rpx;
+  width: 160rpx;
+  background-color: #fed12d;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+.sign_out {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500rpx;
+  height: 80rpx;
+  background: #ccc;
+  font-size: 30rpx;
+  margin: 40rpx auto;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+.sign_in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500rpx;
+  height: 80rpx;
+  background: #fed12d;
+  font-size: 30rpx;
+  margin: 40rpx auto;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}

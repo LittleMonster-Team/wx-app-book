@@ -1,0 +1,6 @@
+<view class="inputStyle2">
+  <input placeholder='更改一个让别人记住你的名字' class="inputStyle" type="text" bindinput="bindKeyInput" value="{{inputValue}}" maxlength="12"/>
+  <icon size='30rpx' type='clear' wx:if="{{deleteIcon}}" bindtap="iconClick" />
+</view>
+
+<view bindtap="changeUserName" class="confirm">确认修改</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "每日推荐",
+  "usingComponents": {
+    "BookList": "/component/book_list/book_list"
+  }
+}

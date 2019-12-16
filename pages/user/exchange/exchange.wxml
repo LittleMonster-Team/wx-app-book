@@ -1,0 +1,26 @@
+<view class='nav'>
+  <block wx:for="{{nav}}" wx:key="key">
+    <view class="txt1" style="background-color:{{curIndex === item.id ? txt2 : txt3}}" data-id="{{item.id}}" bindtap="getGiftList">{{item.title}}</view>
+  </block>
+</view>
+<scroll-view>
+  <block wx:for="{{commodityList}}" wx:key="index" wx:for-index="idx" wx:for-item="item" id="{{item.id}}">
+    <view>
+      <view class="rowstyle" bindtap="redirectTodetails" data-id="{{item.id}}" data-commodityid="{{item.commodityId}}">
+        <image src="{{item.skuDefaultImg}}" class="mydownloadimage" />
+        <view class="columnstyle">
+          <text class="mydownloadtitle">{{item.skuName}}</text>
+          <text class="mydownloadintroduce">{{item.integral}}积分可兑换</text>
+          <view>
+            <text class="mydownloadchapter1" decode="{{true}}">近30天已兑{{item.exchangeNum}}个</text>
+          </view>
+        </view>
+        <view class="exchangestyle1">
+          <view class="exchangestyle2">
+            <text class="exchange_text">马上兑</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>

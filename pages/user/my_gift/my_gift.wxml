@@ -1,0 +1,20 @@
+<block wx:for="{{giftList}}" wx:key="index" wx:for-index="idx" wx:for-item="item" id="{{item.id}}">
+  <view>
+    <view class="rowstyle" bindtap="" data-id="{{item.id}}">
+      <image src="{{item.commoditySkuInfo.skuDefaultImg}}" class="mydownloadimage" />
+      <view class="columnstyle">
+        <text class="mydownloadtitle">{{item.commoditySkuInfo.skuName}}</text>
+        <text class="mydownloadintroduce">{{item.commoditySkuInfo.skuDetails}}</text>
+        <view class="exchangeTime">
+        <text class="exchangeTime1">兑换时间：</text>
+        <text class="exchangeTime2">{{item.exchangeTime}}</text>
+        </view>
+      </view>
+      <view class="exchangestyle1">
+        <view class="exchangestyle2">
+          <text class="exchange_text" bindtap="reconvert" data-skuid="{{item.commoditySkuInfo.id}}" data-commodityid="{{item.commoditySkuInfo.commodityId}}">再次兑换</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>

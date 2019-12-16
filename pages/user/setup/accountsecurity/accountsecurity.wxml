@@ -1,0 +1,23 @@
+<view>
+  <view class="sections">
+    <view class="section">
+      <text class="sectiontext">账号ID</text>
+      <text class="textstyle">{{id}}</text>
+    </view>
+    <view class="section" bindtap="redirectToExchange">
+      <text class="sectiontext">绑定手机号</text>
+      <text class="textstyle">{{phone}}</text>
+      <image class="timage" src="/image/user/right_arrow.png" />
+    </view>
+    <view class="section" bindtap="redirectToWallet">
+      <text class="sectiontext"> 绑定微信</text>
+      <text class="bindingstyle2" wx:if="{{bindingwx}}"> 已绑定</text>
+      <text class="bindingstyle" wx:else> 未绑定</text>
+      <image class="timage" src="/image/user/right_arrow.png" />
+    </view>
+    <view class="section" bindtap="redirectToChangePassword">
+      <text class="sectiontext"> 修改密码</text>
+      <image class="timage" src="/image/user/right_arrow.png" />
+    </view>
+  </view>
+</view>

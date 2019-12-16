@@ -1,0 +1,65 @@
+<view bindtap="redirectToReceiveAddress" class="addressStyle">
+  <image src="/image/user/collect_adderss.png" class="addressImg" />
+  <view class="userClass1">
+    <view class="userClass2">
+      <view class="userName">{{receiveAddress.name}}</view>
+      <view class="userPhone">{{receiveAddress.phoneNumber}}</view>
+    </view>
+    <view class="region">{{receiveAddress.province}} {{receiveAddress.city}} {{receiveAddress.region}} {{receiveAddress.detailAddress}}</view>
+  </view>
+  <image class="tl" src="/image/user/right_arrow.png" />
+</view>
+
+<view class="information">
+  <view class="orderStyle">
+    <image src="{{gift.skuInfoEntity.skuDefaultImg}}" class="orderImg" />
+    <view class="orderDetails1">
+      <view class="orderName">{{gift.skuInfoEntity.skuName}}</view>
+      <view class="orderDetails2">
+        <view class="orderPrice">￥{{gift.skuInfoEntity.integral}}</view>
+        <view class="orderNum">×{{purchaseQuantity}}</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view>
+
+    <view class="buy">
+      <view class="introduce">购买数量：</view>
+      <view class="commodity_details_number">
+        <view class="reduceNum" bindtap="reduceNum">-</view>
+        <view class="buyNum">{{purchaseQuantity}}</view>
+        <view class="plusNum" bindtap="plusNum">+</view>
+      </view>
+    </view>
+    <view class="buy">
+      <view class="introduce">配送方式：</view>
+      <view class="peisong">普通配送</view>
+    </view>
+    <view class="buy">
+      <view class="introduce">开具发票：</view>
+      <view class="fapiao">本次不开具发票</view>
+    </view>
+    <view class="buy">
+      <view class="introduce">订单备注：</view>
+      <input class="weui-input" placeholder="选填，请先和商家协商一致" placeholder-class="beizhu" />
+    </view>
+
+    <view class="valuation">
+      <view class="valuationNum">共 {{purchaseQuantity}} 件</view>
+      <view class="valuationText">小计:</view>
+      <view class="valuationPrice">￥{{payamount}}</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="submission">
+  <view class="total">
+    <view class="subNum">共 {{purchaseQuantity}} 件</view>
+    <view class="subText">合计:</view>
+    <view class="subPrice">￥{{payamount}}</view>
+    <view class="subBtn" bindtap="submitOrder">提交订单</view>
+  </view>
+</view>

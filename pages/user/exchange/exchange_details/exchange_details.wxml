@@ -1,0 +1,135 @@
+<view>
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" bindtap="closeModal"></view>
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal2}}" bindtap="closeModa2"></view>
+  <view>
+    <view class="banner">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{skuImageList}}" wx:key="item">
+          <swiper-item>
+            <image src="{{item.imgUrl}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="nameInformation">
+      <text class="title">{{commodity.skuName}}</text>
+
+      <view class="integral">
+        <text class="integralText1">{{commodity.integral}}</text>
+        <text class="integralText2" decode="{{true}}">&nbsp;积分</text>
+      </view>
+      <text class="referencePrice" decode="{{true}}">&nbsp;市场参考价￥{{commodity.price}}&nbsp;</text>
+    </view>
+  </view>
+
+
+  <view>
+
+    <view class="line"></view>
+
+    <view class="section" bindtap="colorClassification">
+      <text class="sectiontext1"> 选择</text>
+      <text class="sectiontext2"> 选择其他类别</text>
+      <image class="timage" src="/image/user/right_arrow.png" />
+    </view>
+    <view class="commodityColor">
+      <block wx:for="{{skuImageList}}" wx:key="item" wx:if="{{index<3}}">
+        <image src="{{item.imgUrl}}" class="commodityImg" />
+      </block>
+      <text class="commodityText">共{{skuImageList.length}}色可选</text>
+    </view>
+    <view class="section" bindtap="parameter">
+      <text class="sectiontext1"> 参数</text>
+      <text class="sectiontext2"> 产品相关参数</text>
+      <image class="timage" src="/image/user/right_arrow.png" />
+    </view>
+    <view class="section">
+      <text class="sectiontext2" decode="{{true}}">宝贝测评&nbsp;(16)</text>
+      <text class="sectiontext3">查看全部</text>
+      <image class="timage" src="/image/user/right_arrow.png" />
+    </view>
+
+    <view class="evaluation">
+      <text class="evaluation_details" decode="{{true}}">&nbsp;适合人群&nbsp;(92)</text>
+      <text class="evaluation_details" decode="{{true}}">&nbsp;质量好&nbsp;(12)</text>
+    </view>
+
+    <view>
+          <view class="comment">
+            <image class="commentImg" src="{{comment.user.headPortrait}}" />
+            <text class="commentName">{{comment.user.username}}</text>
+          </view>
+          <view class="comment_details">{{comment.comment.content}}</view>
+    </view>
+
+  </view>
+
+  <view>
+    <view class='placeholder-view'></view>
+    <view class="uuu">
+      <view bindtap="colorClassification" class="exchange">立即兑换</view>
+    </view>
+  </view>
+  <!-- 选择颜色分类 -->
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <!-- <view class="modalDlg"> -->
+    <scroll-view scroll-y="true" style="height: 800rpx;">
+      <!-- <view class="modalDlg"> -->
+      <view class="commodity_details_above1">
+        <image src="{{skuImageList[0].imgUrl}}" class="commodity_details_image" />
+        <view class="commodity_details_above2">
+          <view class="commodity_details_money">
+            <text class="commodity_details_price" decode="{{true}}">&nbsp;￥{{total1}}&nbsp;</text>
+            <text class="commodity_details_integral" decode="{{true}}">&nbsp;{{total2}}积分兑换</text>
+          </view>
+          <text class="commodity_details_stock">库存{{commodity.stockNum}}件</text>
+          <text class="commodity_details_title" decode="{{true}}">选择&nbsp;颜色分类</text>
+        </view>
+      </view>
+      <view class="commodity_details_middle">
+        <block wx:for="{{saleattr}}" wx:key="item" wx:for-item="saleattrItem" wx:for-index="itemIdx">
+          <text class="commodity_details_classification">{{saleattrItem.saleAttrName}}</text>
+          <view class="commodity_details_size">
+            <view class='index_tab'>
+              <scroll-view class="bottom_scroll" scroll-x="true" scroll-with-animation="true">
+                <block wx:for="{{saleattrItem.spuSaleAttrValueList}}" wx:key="item" wx:for-item="listItem" wx:for-index="listIdx">
+                  <view class='nav' bindtap='choiceTap' data-itemidx="{{itemIdx}}" data-listidx="{{listIdx}}" data-itemid="{{saleattrItem.id}}" data-listid="{{listItem.id}}">
+                    <text decode="{{true}}" class="{{listItem.isChecked==0?'commodity_details_size_middle1':'commodity_details_size_middle2'}}">&nbsp;{{listItem.saleAttrNames}}&nbsp;</text>
+                  </view>
+                </block>
+              </scroll-view>
+            </view>
+          </view>
+        </block>
+        <view class="commodity_details_purchase_quantity">
+          <text class="commodity_details_classification">购买数量</text>
+          <view class="commodity_details_number">
+            <view class="commodity_details_num1" bindtap="reduceNum">-</view>
+            <view class="commodity_details_num2">{{purchaseQuantity}}</view>
+            <view class="commodity_details_num1" bindtap="plusNum">+</view>
+          </view>
+        </view>
+      </view>
+      <view class="ok" bindtap="genTradeCode">立即兑换</view>
+    </scroll-view>
+  </view>
+  <!-- 产品参数 -->
+  <view class="modalDlg2" wx:if="{{showModal2}}">
+    <scroll-view scroll-y="true" style="height: 800rpx;">
+      <!-- <view class="modalDlg2"> -->
+      <view class="producParameters">产品参数</view>
+      <view class="section2">
+        <text class="sectiontext5"> 品牌</text>
+        <text class="sectiontext6"> {{commodity.brandName}}</text>
+      </view>
+      <block wx:for="{{skuAttrValueList}}" wx:key="item" wx:for-item="skuAttrValue">
+        <view class="section2">
+          <text class="sectiontext5"> {{skuAttrValue.attrName}}</text>
+          <text class="sectiontext6"> {{skuAttrValue.attrValueName}}</text>
+        </view>
+      </block>
+      <view class="ok" bindtap="closeParameter">完成</view>
+    </scroll-view>
+  </view>
+
+</view>

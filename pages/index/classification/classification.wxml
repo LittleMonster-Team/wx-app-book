@@ -1,0 +1,17 @@
+<view>
+  <block wx:for="{{classificationList}}" wx:key="item" wx:for-item="classificationItem" wx:for-index="listIdx" >
+    <view class='rowstyle'>
+      <image src="/image/index/recommend/bedtime.png" class="storyimg" />
+      <view class="sign">{{classificationItem.classificationName}}</view>
+    </view>
+
+    <view class="classification">
+    <block wx:for="{{classificationItem.categoryValueList}}"  wx:key="item" wx:for-item="listItem" wx:for-index="listIdx" >
+      <text class="sort" bindtap="categoryClick" data-itemidx="{{itemIdx}}" data-listidx="{{listIdx}}" data-itemid="{{classificationItem.id}}" data-listid="{{listItem.id}}" data-value="{{listItem.categoryName}}"style="background-color: {{listItem.bgcolor}}">{{listItem.categoryName}}</text>
+    </block>
+    </view>
+
+  </block>
+</view>
+
+

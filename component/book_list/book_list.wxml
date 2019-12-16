@@ -1,0 +1,15 @@
+<block wx:for="{{bookList}}" wx:key="item" wx:for-index="idx">
+  <view class="rowstyle"  data-id="{{item.id}}" bindtap="redirectToDetails">
+    <image src="{{item.bookCover}}" class="bookimage" />
+    <view class="columnstyle">
+      <text class="booktitle">{{item.bookName}}</text>
+      <text class="bookintroduce">{{item.bookSynopsis}}</text>
+      <view>
+        <image class="imgstyle" src="/image/index/recommend/listen_in.png" />
+        <text class="bookchapter" decode="{{true}}">{{item.bookPlayNum}}次收听</text>
+        <image class="imgstyle" src="/image/index/recommend/story.png" />
+        <text class="bookchapter" decode="{{true}}">共{{item.bookChapterNum}}章故事</text>
+      </view>
+    </view>
+  </view>
+</block>

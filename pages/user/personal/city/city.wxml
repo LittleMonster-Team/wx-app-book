@@ -1,0 +1,33 @@
+<!-- <citylist styles='max-height:100%;' bindcitytap='cityTap'></citylist> -->
+<!--index.wxml-->
+<view class="title">
+  <input class="title_list" value="{{cityName}}" placeholder="城市名称" />
+  <button bindtap="redirectToPersonal">确认</button>
+</view>
+<scroll-view scroll-y="true" style="height: {{winHeight}}px;" scroll-into-view="{{scrollTopId}}" class="city_list">
+  <block wx:for="{{citys}}" wx:for-index="idx" wx:for-item="cityName" wx:key="item">
+    <text id="{{idx}}" class="list_tit">{{idx}}</text>
+    <block wx:for="{{cityName}}" wx:key="item">
+      <!-- 
+这里我要讲一下data-用法。
+“data-”是事件的使用方式
+bindtap是事件处理函数，在这里，我们希望通过点击具体的城市名称，然后在文本框中显示对应的值。具体代码后面再说
+具体的解释大家可以看官网:https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/event.html
+-->
+      <view class="list_con" data-cityname="{{item.name}}" bindtap="bindCity">{{item.name}}</view>
+    </block>
+  </block>
+</scroll-view>
+<!--城市选择列表-->
+<view class="scroll_list" bindtouchstart="chStart" bindtouchend="chEnd" catchtouchmove="chMove" style="background: rgba(0,0,0,{{trans}});">
+  <block wx:for="{{citys}}" wx:for-index="idx" wx:for-item="cityName" wx:key="item">
+    <block wx:if="{{idx != '热门城市'}}">
+      <view id="{{idx}}" class="scroll_list_chi" style="line-height:{{lineHeight}}px ; height:{{lineHeight}}px ;font-size:{{lineHeight/1.7}}px;" bindtouchstart="getWords" bindtouchend="setWords">{{idx}}</view>
+    </block>
+  </block>
+</view>
+
+<!--选择显示-->
+<view hidden="{{hidden}}" class="showwords">
+  {{showwords}}
+</view>

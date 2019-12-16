@@ -1,0 +1,16 @@
+<block wx:for="{{bookList}}" wx:key="index">
+  <view class="rowstyle">
+    <image src="{{item.bookCover}}" class="mypurchaseimage" />
+    <view class="columnstyle">
+      <text class="mypurchasetitle">{{item.bookName}}</text>
+      <text class="mypurchaseintroduce">{{item.bookSynopsis}}</text>
+      <view>
+        <text class="mypurchasechapter1" decode="{{true}}">已购{{item.chapterList.length}}集 | 最近更新至{{item.bookChapterNum}}集</text>
+        <!-- <text class="mypurchasechapter2" decode="{{true}}">已播70%</text> -->
+      </view>
+    </view>
+    <view class="detailsstyle">
+      <image src="/image/user/details.png" class="detailsimg" bindtap="redirectToDetails" data-id="{{item.id}}"/>
+    </view>
+  </view>
+</block>

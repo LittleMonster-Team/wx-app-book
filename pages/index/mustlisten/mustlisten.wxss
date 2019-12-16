@@ -1,0 +1,26 @@
+.rowstyle {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.storyimg {
+  margin-right: 10rpx;
+  margin-left: 20rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.storytext {
+  font-size: 35rpx;
+}
+
+.more {
+  color: #666;
+  position: absolute;
+  right: 0;
+  margin-right: 40rpx;
+  font-size: 30rpx;
+}

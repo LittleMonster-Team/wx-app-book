@@ -1,0 +1,18 @@
+<block wx:for="{{rankingList}}" wx:key="item" wx:for-index="idx">
+  <view class="rowstyle" bindtap="redirectToDetails" data-id="{{item.id}}">
+    <view wx:if="{{idx < 4}}" style="background-image: {{bimgs['bimg_'+idx]}};" class="ranking">{{idx+1}}</view>
+    <view wx:else style="background-image: {{bimgs['bimg_3']}};" class="ranking">{{idx+1}}</view>
+    <image src="{{item.bookCover}}" class="newarrivalimage" />
+    <view class="columnstyle">
+      <text class="newarrivaltitle">{{item.bookName}}</text>
+      <text class="newarrivalintroduce">{{item.bookSynopsis}}</text>
+      <view>
+        <image class="imgstyle" src="/image/index/recommend/listen_in.png" />
+        <text class="newarrivalchapter" decode="{{true}}">{{item.bookPlayNum}}次收听</text>
+        <image class="imgstyle" src="/image/index/recommend/story.png" />
+        <text class="newarrivalchapter" decode="{{true}}">共{{item.bookChapterNum}}章故事</text>
+      </view>
+    </view>
+  </view>
+  <view class="line"></view>
+</block>

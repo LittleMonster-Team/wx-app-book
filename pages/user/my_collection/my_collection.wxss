@@ -1,0 +1,70 @@
+page {
+  background-color: #f1f1f1;
+  background-repeat: no-repeat;
+  /* background-size: 100% 100%; *//* height: 100%; */
+}
+
+.rowstyle {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+  background-color: white;
+  /* margin: 10rpx; *//* border: 2rpx solid #000; */
+}
+
+.columnstyle {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+}
+
+/* 分割线 */
+
+.line {
+  height: 20rpx;
+  background: #f1f1f1;
+}
+
+/* 推荐图片 */
+
+.recommendedimage {
+  margin: 20rpx;
+  width: 200rpx;
+  height: 150rpx;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+/* 推荐书名 */
+
+.recommendedtitle {
+  margin: 10rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+/* 推荐简介 */
+
+.recommendedintroduce {
+  width: 400rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 20rpx;
+  color: #696969;
+  margin: 10rpx;
+}
+
+/*推荐章节*/
+
+.recommendedchapter {
+  font-size: 20rpx;
+  color: #696969;
+  margin: 10rpx;
+  margin-right: 20rpx;
+}
+
+.imgstyle {
+  margin-left: 10rpx;
+  width: 25rpx;
+  height: 25rpx;
+}

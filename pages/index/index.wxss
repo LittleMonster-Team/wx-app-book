@@ -1,0 +1,302 @@
+/* page {
+  background-image: url("http://imgsrc.baidu.com/forum/pic/item/820cb051f81986184622bff94ded2e738bd4e679.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+} */
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.content {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+}
+
+.content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+}
+
+.bottom {
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}
+
+.userinfo-avatar1 {
+  width: 65rpx;
+  height: 65rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+  background-color: #aaa;
+  border-radius: 50%;
+}
+
+.userinfo-avatar2 {
+  width: 65rpx;
+  height: 65rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  border: 2rpx solid #aaa;
+}
+
+.rowstyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-top: 40rpx;
+}
+
+.iconStyle {
+  margin-right: 20rpx;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: 2rpx solid #000; */
+  margin-top: 40rpx;
+}
+
+.inputStyle2 {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 580rpx;
+  height: 60rpx;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+  border: 2rpx solid #eee;
+  margin-top: 10rpx;
+}
+
+.inputStyle {
+  width: 80%;
+  font-size: 25rpx;
+  height: 60rpx;
+  /* border: 2rpx solid #eee; */
+}
+
+.placeholderStyle {
+  font-size: 25rpx;
+}
+
+.swiperClass {
+  margin-top: 50rpx;
+  height: 280rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 90%;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+.slide-image.active {
+  transform: none;
+  transition: all 0.2s ease-in 0s;
+}
+
+.slide-image.quiet {
+  transform: scale(0.8333333);
+  transition: all 0.2s ease-in 0s;
+}
+
+/* 选择图标整体内容 */
+
+.choice {
+  widows: 500rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 选择图标单个内容 */
+
+.choice_centered {
+  display: flex;
+  /* border: 2rpx solid#eee; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+/* 选择图片 */
+
+.choiceimage {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 20rpx;
+}
+
+.choiceText {
+  font-size: 30rpx;
+}
+
+/* 每日推荐……图标 */
+
+.labelimage {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.labelStyle {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+/* 更多 */
+
+.more {
+  color: #666;
+  font-size: 30rpx;
+  position: absolute;
+  right: 0;
+  margin-right: 40rpx;
+}
+
+/* 推荐边框 */
+
+.recommendrowstyle {
+  /* border: 2rpx solid#eee; */
+  border-radius: 0 50rpx 50rpx 50rpx;
+  box-shadow: 0rpx 0rpx 1rpx 1rpx #ccc;
+  display: flex;
+  flex-direction: row;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+  position: relative;
+  width: 445rpx;
+  height: 300rpx;
+  border: none;
+  padding-left: 235rpx;
+}
+
+/* 推荐内容 */
+
+.recommendedcontent {
+  display: flex;
+  flex-direction: column;
+  width: 500rpx;
+  height: 300rpx;
+  margin-top: 30rpx;
+}
+
+.recommendedcontent2 {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 推荐图片 */
+
+.recommendimage {
+  width: 200rpx;
+  height: 300rpx;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+  overflow: hidden;
+  position: absolute;
+  top: -19rpx;
+  left: -17rpx;
+}
+
+/* 推荐标题 */
+
+.recommendedtitle1 {
+  font-weight: bold;
+  font-size: 30rpx;
+  width: 120rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.recommendedtitle2 {
+  font-weight: bold;
+  font-size: 30rpx;
+  margin-left: 50rpx;
+  width: 205rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 推荐详情 */
+
+.recommendationdetails {
+  font-size: 25rpx;
+  color: #666;
+  margin-top: 10rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+/* 最新上架……布局 */
+
+.newrowstyle {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  justify-content: space-around;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 最新上架……图片 */
+
+.newimage {
+  width: 200rpx;
+  height: 300rpx;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+/* 最新上架……内容 */
+
+.new_centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* 书名作者 */
+.authorStyle{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.author {
+  font-size: 30rpx;
+  width: 175rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

@@ -1,0 +1,17 @@
+<view class="classification">
+  <text class="sort" bindtap="selectFollow" style="background-color: {{bgcolor1}}"> 关注 </text>
+  <text class="sort" bindtap="selectFans" style="background-color: {{bgcolor2}}"> 粉丝 </text>
+</view>
+<block  wx:for="{{followFansList}}" wx:key="item" >
+  <view class="userStyle" bindtap="navigateToUserDetails" data-id="{{item.user.id}}">
+    <image src="{{item.user.headPortrait}}" class="userImg" />
+    <view class="nameQuotations">
+      <view class="userName">{{item.user.username}}</view>
+      <view class="userQuotations">{{item.user.quotations}}</view>
+    </view>
+    <view class="followFans">
+      <view class="userFollow">关注：{{item.userSpecificInformation.followNum}}</view>
+      <view class="userFans">粉丝：{{item.userSpecificInformation.fansNum}}</view>
+    </view>
+  </view>
+</block>

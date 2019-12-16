@@ -1,0 +1,257 @@
+page {
+  background-color: #f1f1f1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.userinfo-avatar1 {
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 40rpx;
+  background-color: #aaa;
+  border-radius: 50%;
+}
+
+.userinfo-avatar2 {
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 40rpx;
+  border-radius: 50%;
+  border: 2rpx solid#aaa;
+}
+
+.rowstyle {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-top: 40rpx;
+  /* border: 2rpx solid#ddd; */
+}
+
+.gift {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+}
+
+.loginstyle {
+  font-size: 40rpx;
+  width: 250rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.giftstyle {
+  font-size: 25rpx;
+  color: #9b7401;
+}
+
+.giftstyle2 {
+  /* 文字排版--下划线 */
+  text-decoration: underline;
+  font-size: 25rpx;
+  color: #9b7401;
+}
+
+.signin1 {
+  position: absolute;
+  right: 50rpx;
+  display: flex;
+  align-items: center;
+}
+
+.signin2 {
+  position: absolute;
+  right: 50rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.signin3 {
+  display: flex;
+  align-items: center;
+}
+
+.signinimage {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+/* 选择图标整体内容 */
+
+.choice {
+  border: 2rpx solid#ddd;
+  background-color: white;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40rpx;
+  margin-right: 40rpx;
+  margin-left: 40rpx;
+}
+
+/* 选择图标单个内容 */
+
+.choice_centered {
+  display: flex;
+  /* border: 2rpx solid#eee; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 25rpx;
+}
+
+/* 选择图片 */
+
+.choiceimage {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 15rpx;
+}
+
+/* 选择文字 */
+
+.choice_font {
+  font-size: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 分割线 */
+
+.lines {
+  margin-top: 30rpx;
+  height: 2rpx;
+  background: #ccc;
+}
+
+.sections {
+  margin-top: 40rpx;
+}
+
+.section {
+  background: #fff;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+  padding: 20rpx;
+  display: flex;
+  /* border: 2rpx solid#000; */
+  flex-direction: row;
+  align-items: center;
+}
+
+.sectionimage {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 40rpx;
+}
+
+.sectiontext {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.tl {
+  position: absolute;
+  left: 90%;
+  color: #aaa;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+/* 遮罩层 */
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.5;
+}
+
+/* 弹出层 */
+
+.modalDlg {
+  width: 70%;
+  height: 650rpx;
+  position: fixed;
+  top: 130rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  background-color: #ec9700;
+  border-radius: 30px;
+}
+
+/* 弹出层里面的文字与图片 */
+
+.integraltext {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 30rpx;
+  color: white;
+  font-size: 60rpx;
+}
+
+.integralstyle1 {
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 30rpx;
+  color: white;
+}
+
+.integralstyle2 {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  color: white;
+  background-color: white;
+}
+
+.integralstyle3 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  margin-left: 27rpx;
+  align-items: center;
+  font-size: 30rpx;
+  color: #be940e;
+}
+
+.integralstyle2 image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 弹出层里面的按钮 */
+
+.closePopup {
+  width: 300rpx;
+  height: 70rpx;
+  background: #df3e21;
+  line-height: 70rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  margin: 40rpx auto;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}

@@ -1,0 +1,36 @@
+<view class="findWhole">
+  <view class="findBody">
+    <view class="findUser" bindtap="navigateToUserDetails" data-id="{{commentReply.user.id}}">
+      <image src="{{commentReply.user.headPortrait}}" class="findUserImg" />
+      <text class="findUserName">{{commentReply.user.username}}</text>
+    </view>
+    <text class="findUsercontent">{{commentReply.commentContent}}</text>
+    <view class="findFoot">
+      <text class="findFootTime">{{commentReply.commentTime}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="replyStyle">回复内容</view>
+
+<block wx:for="{{commentReplyList}}" wx:key="index" wx:key="{{index}}" wx:for-index="idx" wx:for-item="item">
+  <view class="findWhole">
+    <view class="findBody">
+      <view class="findUser"  bindtap="navigateToUserDetails" data-id="{{item.users.id}}">
+        <image src="{{item.users.headPortrait}}" class="findUserImg" />
+        <text class="findUserName">{{item.users.username}}</text>
+      </view>
+      <text class="findUsercontent">{{item.content}}</text>
+      <view class="findFoot">
+        <text class="findFootTime">{{item.replyTime}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+<view class="commentStyle">
+  <view class="inputStyle">
+    <input class="weui-input" bindinput="bindKeyInput" value="{{inputValue}}" placeholder="说点什么呢..." placeholder-class="placeholderStyle" />
+    <image class="sendOut" src="/image/story/sendOut.png" bindtap="addCommentReply" wx:if="{{sendOutIcon}}" />
+  </view>
+
+</view>

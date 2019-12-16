@@ -1,0 +1,24 @@
+<view>
+  <view class='rowstyle'>
+    <image src="/image/index/recommend/bedtime.png" class="storyimg" />
+    <text class='storytext'>成语故事</text>
+    <view class='more' bindtap="chengyuUrl">更多></view>
+  </view>
+
+  <BookList bookList='{{chengyuList}}'></BookList>
+
+  <view class='rowstyle'>
+    <image src="/image/index/recommend/bedtime.png" class="storyimg" />
+    <text class='storytext'>睡前故事</text>
+    <view class='more' bindtap="shuiqianUrl">更多></view>
+  </view>
+
+  <BookList bookList='{{shuiqianList}}'></BookList>
+
+  <view class='rowstyle'>
+    <image src="/image/index/recommend/security.png" class="storyimg" />
+    <text class='storytext'>安全教育</text>
+    <view class='more' bindtap="anquanUrl">更多></view>
+  </view>
+  <BookList bookList='{{anquanList}}'></BookList>
+</view>

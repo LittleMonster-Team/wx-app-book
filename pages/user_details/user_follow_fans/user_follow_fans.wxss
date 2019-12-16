@@ -1,0 +1,66 @@
+.classification {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20rpx;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+.userStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20rpx;
+  margin: 10rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  border: 1rpx solid #FED12D;
+}
+
+.userImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.nameQuotations {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  width: 400rpx;
+}
+
+.userName {
+  font-size: 30rpx;
+}
+
+.userQuotations {
+  font-size: 20rpx;
+  color: #ccc;
+}
+
+.followFans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userFollow {
+  font-size: 20rpx;
+  color: #FED12D;
+}
+
+.userFans {
+  font-size: 20rpx;
+  color: #FED12D;
+}

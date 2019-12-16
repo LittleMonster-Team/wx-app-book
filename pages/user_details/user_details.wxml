@@ -1,0 +1,54 @@
+<!--pages/user-details/user-details.wxml-->
+<view>
+
+  <view class="basic">
+    <image src="{{user.headPortrait}}" class="basicImg"></image>
+    <view class="basicTitle">
+      <text class="basicName">{{user.username}}</text>
+      <text class="basicContent">{{user.quotations}}</text>
+    </view>
+    <block wx:if="{{followShow}}">
+      <view class="basicFollow" wx:if="{{followStyle}}" bindtap="followUser">关注</view>
+      <view class="basicFollow2" wx:else bindtap="cancelFollowUser">已关注</view>
+    </block>
+    <block wx:else>
+    </block>
+  </view>
+
+  <view class="subscribe">
+    <view class="subscribe2">
+      <text class="subscribeNum">{{userSpecificInformation.subscribeNum}}</text>
+      <text class="subscribeContent">订阅</text>
+    </view>
+    <view class="subscribe2">
+      <text class="subscribeNum">{{userSpecificInformation.playVideoNum}}</text>
+      <text class="subscribeContent">播放量</text>
+    </view>
+    <view class="subscribe2">
+      <text class="subscribeNum">{{userSpecificInformation.videoNum}}</text>
+      <text class="subscribeContent">视频</text>
+    </view>
+  </view>
+
+
+  <view>
+    <view class="videoTitle">
+      <image src="/image/login/video.png" class="videoImg"></image>
+      <text class="videoContent">视频</text>
+    </view>
+    <block wx:for="{{videoList}}" wx:key="index">
+      <view class="rowstyle">
+        <image src="{{item.img}}" class="recommendedimage" />
+        <view class="columnstyle">
+          <text class="recommendedtitle">{{item.title}}</text>
+          <view>
+            <text class="recommendedchapter" decode="{{true}}">{{item.playNum}}次播放</text>
+            <text class="recommendedchapter" decode="{{true}}">{{item.utime}}更新</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+
+</view>

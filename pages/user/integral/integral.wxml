@@ -1,0 +1,86 @@
+<view>
+  <view class="integralHead">
+    <text class="integralHeadText1">我的积分</text>
+    <text class="integralHeadText2">{{integral}}</text>
+    <text class="integralHeadBtn" bindtap="redirectToExchange">去兑换</text>
+  </view>
+  <view class="integralBody1">
+    <text class="integralBodyText1">7天签到领积分</text>
+    <view class="integralBody2">
+      <view class="integralBody3">
+        <image class="integralBodyImg" src="/image/user/jifen.png" />
+        <text class="integralBodyText2">已领</text>
+      </view>
+      <view class="integralBody3">
+        <image class="integralBodyImg" src="/image/user/jifen2.png" />
+        <text class="integralBodyText2">明日</text>
+      </view>
+      <view class="integralBody3">
+        <image class="integralBodyImg" src="/image/user/jifen2.png" />
+        <text class="integralBodyText2">3天</text>
+      </view>
+      <view class="integralBody3">
+        <image class="integralBodyImg" src="/image/user/jifen2.png" />
+        <text class="integralBodyText2">4天</text>
+      </view>
+      <view class="integralBody3">
+        <image class="integralBodyImg" src="/image/user/jifen2.png" />
+        <text class="integralBodyText2">5天</text>
+      </view>
+      <view class="integralBody3">
+        <image class="integralBodyImg" src="/image/user/jifen2.png" />
+        <text class="integralBodyText2">6天</text>
+      </view>
+      <view class="integralBody3">
+        <image class="integralBodyImg" src="/image/user/jifen3.png" />
+        <text class="integralBodyText2">7天</text>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class="integralFoot1">
+      <image src="/image/user/exchange.png" class="integralFootImg" />
+      <text class="integralFootText1">日常任务</text>
+    </view>
+    <view class="integralFoot2">
+      <view class="integralFoot3">
+        <text class="integralFootText2">分享一条声音</text>
+        <text class="integralFootText3">点的人越多，赚的越多</text>
+        <text class="integralFootText4">+1积分</text>
+      </view>
+      <text class="integralFootBtn">去完成</text>
+    </view>
+    <view class="line"></view>
+    <view class="integralFoot2">
+      <view class="integralFoot3">
+        <text class="integralFootText2">分享十条声音</text>
+        <text class="integralFootText3">点的人越多，赚的越多</text>
+        <text class="integralFootText4">+10积分</text>
+      </view>
+      <text class="integralFootBtn">去完成</text>
+    </view>
+    <view class="line"></view>
+    <view class="integralFoot2">
+      <view class="integralFoot3">
+        <text class="integralFootText2">收听十分钟</text>
+        <text class="integralFootText3">收听任务</text>
+        <text class="integralFootText4">+4积分</text>
+
+      </view>
+      <text class="integralFootBtn">去完成</text>
+    </view>
+    <view class="line"></view>
+    <view class="integralFoot2">
+      <view class="integralFoot3">
+        <text class="integralFootText2">收听30分钟</text>
+        <text class="integralFootText3">收听30分钟</text>
+        <text class="integralFootText4">+12积分</text>
+
+      </view>
+      <text class="integralFootBtn">去完成</text>
+    </view>
+    <view class="line"></view>
+  </view>
+
+</view>

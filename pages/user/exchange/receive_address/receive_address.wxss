@@ -1,0 +1,79 @@
+/* pages/user/exchange/receive_address/receive_address.wxss */
+
+.addAddress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 10rpx;
+  right: 40rpx;
+  width: 200rpx;
+  height: 60rpx;
+  font-size: 25rpx;
+  /* background: #fed12d; */
+  /* border-radius: 50rpx 0rpx 50rpx 50rpx; */
+}
+
+.addressStyle {
+  margin-top: 80rpx;
+  margin-left: 20rpx;
+  /* border: 2rpx solid#aaa; */
+}
+
+.addressInformation {
+  display: flex;
+  flex-direction: row;
+}
+
+.addressImg {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.userStyle {
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.userName {
+  font-size: 25rpx;
+}
+
+.userPhone {
+  font-size: 20rpx;
+  margin-left: 20rpx;
+  color: #aaa;
+}
+
+.regionStyle {
+  width: 380rpx;
+  font-size: 20rpx;
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+
+.updateStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dividingLine {
+  margin-left: 30rpx;
+  height: 60rpx;
+  width: 20rpx;
+}
+
+.update{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  color: #aaa;
+  width:120rpx;
+  height: 60rpx;
+  /* background: #fed12d; */
+  /* border-radius: 50rpx 0rpx 50rpx 50rpx; */
+}

@@ -1,0 +1,77 @@
+.feedbackStyle {
+  background: white;
+  padding: 50rpx;
+}
+
+.feedbackImage {
+  width: 167rpx;
+  height: 167rpx;
+}
+
+.feedbackText {
+  margin-left: 20rpx;
+  color: #aaa;
+  font-size: 40rpx;
+}
+
+.section {
+  margin-bottom: 20rpx;
+  margin-top: 10rpx;
+  padding: 20rpx;
+  display: flex;
+  /* border: 2rpx solid#000; */
+  flex-direction: row;
+  align-items: center;
+}
+
+.sectiontext {
+  margin-left: 20rpx;
+  font-size: 35rpx;
+}
+
+.textstyle {
+  font-size: 30rpx;
+  position: absolute;
+  right: 40rpx;
+  color: #aaa;
+}
+
+.textareaStyle {
+  width: 100%;
+  font-size: 30rpx
+}
+
+.placeholderStyle {
+  font-size: 25rpx;
+}
+
+/* ----- */
+
+.question-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 45rpx;
+}
+
+.q-image {
+  width: 167rpx;
+  height: 167rpx;
+  margin: 20rpx;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500rpx;
+  height: 80rpx;
+  background: #fed12d;
+  font-size: 30rpx;
+  margin: 40rpx auto;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+.submit::after {
+  border: none;
+}

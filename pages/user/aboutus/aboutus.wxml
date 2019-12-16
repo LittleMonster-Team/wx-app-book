@@ -1,0 +1,21 @@
+<view>
+  <view class="aboutus">
+    <image src="/image/user/about.png" class="aboutus_image" />
+    <view class="head">
+      <text>咩咩故事</text>
+      <text>版本：1.01</text>
+    </view>
+    <view class="content">
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;咩咩故事，一款父母能为孩子讲故事的手机应用。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宝宝的故事机，儿童故事，睡前故事，哄睡故事，儿歌童谣，儿童有声读物，妈妈讲故事，安徒生童话，0-10岁各年龄段小孩最爱听的故事应有尽有，每天更新，边听故事边赚钱。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爸妈的育儿宝，从备孕到教子全方位的系统为您提供优质内容，更有美国、德国、加拿大等多个国家和地区的教育专家育儿理念和案例供您选择。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;家长必备，小孩最爱，睡前故事，成语故事，神话故事，0-10岁故事应有尽有，每天更新，胎教，育儿知识。</text>
+    </view>
+  </view>
+
+    <view class="section" bindtap="redirectToFeedback">
+      <text class="sectiontext"> 检查更新</text>
+      <text class="textstyle"> 1.0.1</text>
+    </view>
+  <view class="foot">
+    <text>使用条款和政策</text>
+    <text>《服务使用协议及隐私保护政策》</text>
+  </view>
+</view>

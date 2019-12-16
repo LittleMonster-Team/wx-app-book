@@ -1,0 +1,57 @@
+<view>
+
+  <view class="headstyle1">
+    <image src="/image/index/bofang.jpg" />
+    <view class="headstyle2">
+      <text class="headstyle2_text1">{{baoBean}}</text>
+      <text class="headstyle2_text2">宝豆</text>
+    </view>
+  </view>
+
+  <view>
+    <view class="rechargestyle">宝豆充值</view>
+    <label class="upperstyle">
+      <view wx:for="{{rechargeList}}" wx:key="item">
+        <view class="upperstyle1" style="background-color: {{item.bgcolor}}" bindtap="recharge" id="{{index}}" data-money="{{item.money}}">
+          <text class="upperstyle1_text1">{{item.money}}宝豆</text>
+          <text class="upperstyle1_text2">￥{{item.money}}</text>
+        </view>
+      </view>
+    </label>
+  </view>
+
+  <block wx:if="{{payment}}">
+    <view class="lowerstyle1">
+      <view class="lowerstyle1_btn" bindtap="purchase">购买</view>
+      <text class="lowerstyle1_font">———— 充值说明 ————</text>
+      <text class="lowerstyle1_font">宝豆为虚拟金币 1宝豆=1元钱</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="line"></view>
+    <view class="rechargestyle">请选择支付方式</view>
+    
+    <radio-group class="lowerstyle2" bindchange="radioChange">
+      <label>
+        <view class="lowerstyle2_content">
+          <image src="/image/user/weixin.png" class="lowerstyle2_img" />
+          <text class="lowerstyle2_font">微信</text>
+          <radio color='#fff' class="radio" checked="true" value="微信"></radio>
+        </view>
+      </label>
+      <label>
+        <view class="lowerstyle2_content">
+          <image src="/image/user/zhifubao.png" class="lowerstyle2_img" />
+          <text class="lowerstyle2_font">支付宝</text>
+          <radio color='#fff' class="radio" value="支付宝"></radio>
+        </view>
+      </label>
+
+    </radio-group>
+    <view class="paymentstyle">
+      <text class="paymentstyle_text">￥{{money}}</text>
+      <view class="paymentstyle_btn1" bindtap="payment">确认支付</view>
+      <view class="paymentstyle_btn2" bindtap="cancelPurchase">取消</view>
+    </view>
+  </block>
+</view>

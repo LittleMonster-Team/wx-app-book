@@ -1,0 +1,142 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 150rpx;
+}
+
+.txt1 {
+  height: 60rpx;
+  width: 200rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  /* border: 2rpx solid #000; */
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+page {
+  background-color: #f1f1f1;
+  background-repeat: no-repeat;
+}
+
+.rowstyle {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+  background-color: white;
+}
+
+.columnstyle {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+}
+
+/* 更多图片 */
+
+.exchangestyle1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exchangestyle2 {
+  width: 150rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2rpx solid #a2790a;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+.exchange_text {
+  color: #a2790a;
+  font-size: 30rpx;
+}
+
+/* 分割线 */
+
+.line {
+  height: 20rpx;
+  background: #f1f1f1;
+}
+
+/* 推荐图片 */
+
+.mydownloadimage {
+  margin: 20rpx;
+  width: 200rpx;
+  height: 150rpx;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+/* 推荐书名 */
+
+.mydownloadtitle {
+  width: 250rpx;
+  font-size: 30rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 10rpx;
+  font-weight: bold;
+}
+
+/* 推荐简介 */
+
+.mydownloadintroduce {
+  width: 250rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 20rpx;
+  color: #696969;
+  margin-left: 10rpx;
+}
+
+/*推荐章节*/
+
+.mydownloadchapter1 {
+  font-size: 20rpx;
+  color: #696969;
+  margin: 10rpx;
+  margin-right: 20rpx;
+}
+
+.mydownloadchapter2 {
+  font-size: 20rpx;
+  color: #ffbf00;
+  margin: 10rpx;
+  margin-right: 20rpx;
+}
+
+.imgstyle {
+  margin-left: 10rpx;
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.exchangeTime {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.exchangeTime1 {
+  font-size: 18rpx;
+}
+
+.exchangeTime2 {
+  font-size: 18rpx;
+  color: #ffbf00;
+}

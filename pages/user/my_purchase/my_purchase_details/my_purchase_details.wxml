@@ -1,0 +1,15 @@
+<block wx:for="{{detailsList}}" wx:key="index" wx:for-index="idx" wx:for-item="item" id="{{item.id}}">
+  <view class="rowstyle">
+    <image src="{{item.chapterImg}}" class="mypurchaseimage" />
+    <view class="columnstyle">
+      <text class="mypurchasetitle">{{item.bookName}}</text>
+      <text class="mypurchaseintroduce">{{item.chapterContent}}</text>
+      <view>
+        <text class="mypurchasechapter1" decode="{{true}}">{{item.chapterName}}</text>
+      </view>
+    </view>
+    <view class="deletestyle">
+      <image src="/image/user/delete.png" class="deleteimg" bindtap="delItem" data-id="{{item.id}}" />
+    </view>
+  </view>
+</block>

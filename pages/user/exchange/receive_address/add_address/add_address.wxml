@@ -1,0 +1,31 @@
+<view>
+  <view class="inputStyle">
+    <input class="weui-input" bindinput="bindKeyInput1" placeholder="收货人" />
+  </view>
+  <view class="inputStyle">
+    <input class="weui-input" bindinput="bindKeyInput2" placeholder="手机号码" />
+  </view>
+  <view class="inputStyle">
+    <input class="weui-input" bindinput="bindKeyInput3" placeholder="邮政编码" />
+  </view>
+
+  <view class="addressStyle">
+    <view class="collectStyle">收货地址：</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{regions}}" custom-item="{{customItem}}">
+      <view class="regionStyle">{{regions[0]}}-{{regions[1]}}-{{regions[2]}}
+      </view>
+    </picker>
+
+  </view>
+
+  <view class="detailedStyle">
+    <textarea bindinput="bindTextAreaBlur" placeholder="详细地址" class="weui-textarea" />
+  </view>
+
+  <view class="defaultStyle">
+    <text class="default">设为默认地址:</text>
+    <switch bindchange="switchChange" class="switchStyle" type="checkbox"/>
+  </view>
+
+  <view bindtap="addNewAddress" class="preservation">保存</view>
+</view>

@@ -1,0 +1,125 @@
+/* pages/find/find.wxss */
+
+page {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  /* background-size: 100% 100%; *//* height: 100%; */
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: 2rpx solid #000; */
+  margin-top: 40rpx;
+}
+
+.inputStyle2 {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 580rpx;
+  height: 60rpx;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+  border: 2rpx solid #eee;
+  margin-top: 10rpx;
+}
+
+.inputStyle {
+  width: 80%;
+  height: 60rpx;
+  font-size: 25rpx;
+  /* border: 2rpx solid #eee; */
+}
+
+.placeholderStyle {
+  font-size: 25rpx;
+}
+
+.userinfo-avatar1 {
+  width: 65rpx;
+  height: 65rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+  background-color: #aaa;
+  border-radius: 50%;
+}
+
+.userinfo-avatar2 {
+  width: 65rpx;
+  height: 65rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  border: 2rpx solid #aaa;
+}
+
+.rowstyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-top: 40rpx;
+}
+
+.iconStyle {
+  margin-right: 20rpx;
+}
+
+.findContent {
+  display: flex;
+  flex-direction: column;
+  margin: 40rpx;
+}
+
+.findVideo {
+  width: 100%;
+  height: 350rpx;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.informationImg {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.findTitle {
+  font-size: 30rpx;
+  margin: 20rpx;
+}
+
+.findData {
+  color: #999;
+  font-size: 30rpx;
+}
+
+.discuss {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  right: 40rpx;
+}
+
+.discussImg {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.line {
+  border: 1rpx solid #eee;
+}

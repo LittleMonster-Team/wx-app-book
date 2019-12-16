@@ -1,0 +1,116 @@
+.headstyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50rpx;
+  font-size: 50rpx;
+}
+
+.inputstyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: 2rpx solid#000; */
+  background-color: white;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  margin-bottom: 25rpx;
+  height: 80rpx;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+}
+
+.weui-input {
+  margin-left: 40rpx;
+  width: 100%;
+  height: 80rpx;
+  font-size: 25rpx;
+}
+.placeholderStyle {
+  font-size: 25rpx;
+}
+.verification {
+  width: 220rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fdd129;
+  margin-right: 20rpx;
+  text-align: center;
+  font-size: 23rpx;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+}
+
+.ok {
+  width: 620rpx;
+  height: 80rpx;
+  background: #fdd129;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 35rpx;
+  margin-left: 65rpx;
+  margin-bottom: 5rpx;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+}
+
+.loginStyle {
+  color: #4395ff;
+  margin-left: 55%;
+  font-size: 25rpx;
+}
+
+.pwdLogin {
+  color: #9a9a9a;
+  margin-left: 70%;
+  font-size: 25rpx;
+}
+
+.agreement {
+  font-size: 25rpx;
+  margin-left: 60rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+checkbox .wx-checkbox-input {
+  width: 25rpx;
+  height: 25rpx;
+  border: 1rpx solid transparent;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: 1rpx solid transparent;
+  background-color: white;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 22rpx;
+  height: 22rpx;
+  line-height: 22rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fdd129;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.policy {
+  color: #f50001;
+  font-size: 25rpx;
+  margin-left: 60rpx;
+  margin-bottom: 40rpx;
+}
+
+.other {
+  text-align: center;
+  color: #969696;
+  margin-bottom: 50rpx;
+  font-size: 30rpx;
+}
+
+.otherimage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

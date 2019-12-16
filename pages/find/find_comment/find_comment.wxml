@@ -1,0 +1,55 @@
+<view>
+  <view>
+    <view class='search'>
+      <block wx:if="{{username=='未登录'}}">
+        <image src="" class="userinfo-avatar1" bindtap="redirectToLogin" />
+      </block>
+      <block wx:else>
+        <image src="/image/index/bofang.jpg" class="userinfo-avatar2" bindtap="redirectToUser" />
+      </block>
+      <view class="inputStyle2">
+       <input placeholder='搜索' class="inputStyle" type="text" bindinput="bindKeyInput" value="{{inputValue}}" placeholder-class="placeholderStyle" />
+        <icon size='30rpx' type='clear' wx:if="{{deleteIcon}}" bindtap="iconClick" class="iconStyle" />
+        <icon size='30rpx' type='search'></icon>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class="findContent">
+      <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+        danmu-list="{{danmuList}}" enable-danmu controls class="findVideo"></video>
+      <text class="findTitle">学习颜色和数字儿童的颜色与儿童学习视频</text>
+    </view>
+    <view class="line1"></view>
+  </view>
+  <!-- ---- -->
+  <view>
+    <view class="findWhole">
+      <view class="findHead">
+        <text class="findHeadWhole">全部评论</text>
+        <text class="findHeadComment">写评论</text>
+      </view>
+    </view>
+    <block  wx:for="{{findCommentList}}" wx:key="index">
+      <view class="findWhole">
+        <view class="findBody">
+          <view class="findUser">
+            <image src="/image/index/bofang.jpg" class="findUserImg" bindtap="redirectToUserDetails"/>
+            <text class="findUserName">咩咩小羊</text>
+          </view>
+          <text class="findUsercontent">非常棒，会一直支持你</text>
+          <view class="findFoot">
+            <text class="findFootTime">2小时前</text>
+            <view class="findFootImg">
+              <image src="/image/index/find/fabulous.png" />
+              <image src="/image/index/find/comment.png" />
+            </view>
+          </view>
+        </view>
+      </view>
+        <view class="line2"></view>
+    </block>
+  </view>
+  <!-- ----- -->
+</view>

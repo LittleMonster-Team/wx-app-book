@@ -1,0 +1,208 @@
+<view wx:if="{{showModal}}">
+  <view class="detailsUpper">
+    <!-- ++++++ -->
+    <block wx:if="{{introduce==detailsIntroduceList[0].text}}">
+      <view class="detailsHead1">
+        <image src="{{book.bookCover}}" class="detailsHeadImg1" mode="aspectFill" />
+        <view class="detailsHead2">
+          <text class="detailsHeadText1">{{book.bookName}}</text>
+          <text class="detailsHeadText2">{{book.bookAuthor}}</text>
+          <view class="detailsHead3">
+            <image src="{{user.headPortrait}}" class="detailsHeadImg2" mode="aspectFill" />
+            <text class="username">{{user.username}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="detailsScore">
+        <text class="score">{{book.score}}</text>
+        <block wx:for="{{score1}}" wx:key="item">
+          <image src='/image/story/scoreYes.png' class="scoreImage" />
+        </block>
+        <block wx:for="{{score2}}" wx:key="item">
+          <image src='/image/story/scoreNo.png' class="scoreImage" />
+        </block>
+
+        <text class="subscribe1">{{book.bookSubscribeNum}}人订阅</text>
+        <text class="subscribe2" bindtap="subscribeBook" wx:if="{{subscribeStatus}}">+订阅</text>
+        <text class="subscribe3" bindtap="cancelSubscribeBook" wx:else>已订阅</text>
+      </view>
+    </block>
+
+    <block wx:else>
+      <view class="audioFrequency">
+        <image src="{{book.bookCover}}" class="detailsHeadImg3" mode="aspectFill" animation="{{animationData}}" />
+        <text class="detailsHeadText3">{{chapterName}}</text>
+      </view>
+      <view>
+        <view class="progress">
+          <!-- <text class="progressTime">{{voice.time.min}}:{{voice.time.sec}}</text> -->
+          <!-- <slider class="slider" bindchange="hanle_slider_change" bindtouchstart="handle_slider_move_start" bindtouchend="handle_slider_move_end" min="0" block-size="16" block-color="#FED12D" max="100" activeColor="#FED12D" backgroundColor="#fff" value="{{per}}"
+          /> -->
+          <!-- +++++ -->
+          <view class='rowCenter'>
+            <view class='voice' >
+              <movable-area  class="movable-area" id="movable-area">
+                <movable-view disabled='{{!voice.canPlay}}'  bindchange="voiceSeekMove" bindtouchend='seekTouchEnd' direction="horizontal" class='movable-view' style="opacity:{{voice.canPlay?'1':'0'}}" id="movable-view" x="{{voice.margin}}" damping="1000">
+                  <text class='process'>{{voice.time.min}}:{{voice.time.sec}}/{{durationText}}</text>
+                </movable-view>
+              </movable-area>
+              <progress stroke-width='4' backgroundColor='#fff' activeColor='#FED12D' percent='{{voice.progress}}'></progress>
+            </view>
+          </view>
+
+          <!-- ++++++ -->
+          <!-- <text class="progressTime">{{durationText}}</text> -->
+        </view>
+        <view class="controls">
+          <image bindtap="openList" src="/image/story/list2.png" class="playImg" />
+          <image bindtap="prevEvent" src="/image/story/lastOne.png" class="playImg" />
+          <image bindtap="actionEvent" src="/image/story/{{voice.playing ? 'suspend' : 'play'}}.png" class="playImg2" />
+          <image bindtap="nextEvent" src="/image/story/nextOne.png" class="playImg" />
+          <image bindtap="favEvent" src="/image/story/lately2.png" class="playImg" />
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- ++++++ -->
+  <view class="detailsIntroduce">
+    <block wx:for="{{detailsIntroduceList}}" wx:key="item">
+      <text class="introduce" style="background-color: {{item.bgcolor}}" bindtap="recharge" id="{{index}}">{{item.text}}</text>
+    </block>
+  </view>
+  <!-- ++++++ -->
+  <block wx:if="{{introduce == detailsIntroduceList[0].text}}">
+    <view class="synopsis">
+      <text class="synopsisText">{{book.bookSynopsis}}</text>
+    </view>
+    <view class='placeholder-view'></view>
+  </block>
+
+  <block wx:if="{{introduce == detailsIntroduceList[1].text}}">
+    <view class="synopsis">
+      <view class="playList1">
+        <view class="playList2">
+          <image src="/image/story/play2.png" class="playListImg" />
+          <text>播放全部</text>
+        </view>
+        <view class="playList2">
+          <image src="/image/story/sort.png" class="playListImg" />
+          <text>排序</text>
+        </view>
+      </view>
+    </view>
+    <block wx:for="{{chapterList}}" wx:key="index" wx:for-index="idx" wx:for-item="citem">
+
+      <view class="rowstyle">
+        <image src="{{citem.chapterImg}}" class="mydownloadimage" />
+        <view class="columnstyle1">
+          <text class="mydownloadtitle">{{citem.chapterName}}</text>
+          <view>
+            <image class="imgstyle" src="/image/story/play2.png" />
+            <text class="mydownloadchapter1" decode="{{true}}">08:35</text>
+            <image class="imgstyle" src="/image/index/recommend/listen_in.png" />
+            <text class="mydownloadchapter1" decode="{{true}}">{{citem.bookPlayNums}}次收听</text>
+          </view>
+        </view>
+      </view>
+      <view class="operationStyle">
+        <image src="/image/story/play2.png" class="operationImg1" bindtap="playItem" data-id="{{idx}}" />
+        <image src="/image/story/download.png" class="operationImg2" bindtap="delItem" data-id="{{idx}}" />
+      </view>
+
+
+      <view class="lines"></view>
+    </block>
+    <view class='placeholder-view'></view>
+  </block>
+
+  <block wx:if="{{introduce==detailsIntroduceList[2].text}}">
+    <block wx:for="{{findCommentList}}" wx:key="index" wx:key="{{index}}" wx:for-index="idx" wx:for-item="item">
+      <view class="findWhole">
+        <view class="findBody">
+          <view class="findUser" bindtap="navigateToUserDetails" data-id="{{item.user.id}}">
+            <image src="{{item.user.headPortrait}}" class="findUserImg" />
+            <text class="findUserName">{{item.user.username}}</text>
+          </view>
+          <text class="findUsercontent">{{item.commentContent}}</text>
+          <view class="findFoot">
+            <text class="findFootTime">{{item.commentTime}}</text>
+            <view class="findFootImg">
+              <view class="fabulousCommentStyle">
+                <image src="/image/index/find/comment.png" bindtap="commentReply" data-id="{{item.id}}" />
+                <view class="scoreNum">{{item.replayCount}}</view>
+              </view>
+              <view class="fabulousCommentStyle">
+                <image src="/image/index/find/fabulous.png" bindtap="commentFabulous" data-id="{{item.id}}" />
+                <view class="scoreNum">{{item.fabulousCount}}</view>
+              </view>
+
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="lines"></view>
+    </block>
+
+    <view class="commentStyle">
+      <view class="inputStyle">
+        <input class="weui-input" bindinput="bindKeyInput" value="{{inputValue}}" placeholder="说点什么呢..." placeholder-class="placeholderStyle" />
+        <image class="sendOut" src="/image/story/sendOut.png" wx:if="{{sendOutIcon}}" bindtap="addComment" />
+      </view>
+      <view class="fabulousCommentStyle">
+        <image class="playImg" src="/image/index/find/comment.png" />
+        <view class="scoreNum">{{book.bookCommentNum}}</view>
+      </view>
+      <view class="fabulousCommentStyle">
+        <image class="playImg" src="/image/index/find/fabulous.png" />
+        <view class="scoreNum">{{book.bookFabulousNum}}</view>
+      </view>
+    </view>
+
+    <view class='placeholder-view'></view>
+  </block>
+  <view class="uuu" wx:if="{{introduce==detailsIntroduceList[0].text}}">
+    <view class="line"></view>
+    <view class="play">
+      <image class="playImg" src="/image/story/list1.png" bindtap="openList" />
+      <image bindtap="prevEvent" src="/image/story/lastOne.png" class="playImg" />
+      <image bindtap="actionEvent" src="/image/story/{{voice.playing ? 'suspend' : 'play'}}.png" class="playImg2" />
+      <image bindtap="nextEvent" src="/image/story/nextOne.png" class="playImg" />
+      <image bindtap="favEvent" src="/image/story/lately1.png" class="playImg" />
+    </view>
+  </view>
+</view>
+
+<view wx:else>
+  <view class="popupUpper">
+    <view class="audioFrequency">
+      <image src="{{book.bookCover}}" class="detailsHeadImg3" mode="aspectFill" />
+      <text class="popupText">{{book.bookName}}</text>
+    </view>
+  </view>
+
+  <view class="popup">
+    <view class="popupList">
+      <view class="popupOrder">
+        <image src="/image/story/play2.png" class="popupImg" />
+        <text class="orderText">播放顺序</text>
+      </view>
+      <view class="popupOrder">
+        <image src="/image/story/sort.png" class="popupImg" />
+        <text class="orderText">倒序</text>
+      </view>
+    </view>
+    <scroll-view scroll-y="true" style="height: 650rpx;">
+      <block wx:for="{{chapterList}}" wx:key="{{index}}" wx:for-index="idx" wx:for-item="citem">
+        <view class="lines"></view>
+        <view class="playContent" bindtap="modifyColor" id="{{idx}}">
+          <image src="/image/story/yinpin.png" class="yinpinImg" wx:if="{{citem.yinpin}}" />
+          <text class="playTitle" style="color:{{citem.textcolor}}">{{citem.chapterName}}</text>
+          <image src="/image/story/download.png" class="popupDownloadImg" catchtap="delItem" />
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="close" bindtap="closeWindow">
+    <view class="closeBtn">关闭</view>
+  </view>
+</view>

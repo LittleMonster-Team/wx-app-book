@@ -1,0 +1,22 @@
+<view bindtap="redirectToAddAddress" class="addAddress">➕添加新地址</view>
+<view class="addressStyle">
+  <block wx:for="{{receiveAddressList}}" wx:key="index" wx:for-index="idx" wx:for-item="item">
+    <view class="addressInformation">
+      <image src="{{item.defaultStatus==1?'/image/user/default_yes.png':'/image/user/default_no.png'}}" class="addressImg" />
+      <view>
+        <view class="userStyle">
+          <text class="userName">{{item.name}}</text>
+          <text class="userPhone">{{item.phoneNumber}}</text>
+        </view>
+        <view class="regionStyle">
+          <text>{{item.province}}-{{item.city}}-{{item.region}} {{item.detailAddress}}</text>
+        </view>
+      </view>
+      <view class="updateStyle">
+        <image src="/image/user/dividingLine.png" class="dividingLine" />
+        <view class="update" bindtap="redirectToUpdateAddress" data-id="{{item.id}}">编辑</view>
+      </view>
+
+    </view>
+  </block>
+</view>

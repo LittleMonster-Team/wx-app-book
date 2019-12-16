@@ -1,0 +1,87 @@
+.orderStyle {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  /* border: 2rpx solid#aaa; */
+}
+
+.orderImg {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.orderDetails1 {
+  display: flex;
+  flex-direction: column;
+  width: 400rpx;
+}
+
+.orderName {
+  height: 60rpx;
+  margin-left: 20rpx;
+  font-size: 25rpx;
+  color: #aaa;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.orderDetails2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+
+.orderPrice {
+  font-size: 20rpx;
+  color: #aaa;
+  margin-left: 130rpx;
+  margin-right: 20rpx;
+}
+
+.orderNum {
+  font-size: 20rpx;
+  color: #aaa;
+}
+
+.dividingLine {
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+  height: 100rpx;
+  width: 20rpx;
+}
+
+.cancelOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel {
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+}
+
+.payment {
+  font-size: 30rpx;
+}
+
+.deleteOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete {
+  font-size: 30rpx;
+}

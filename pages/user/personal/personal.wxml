@@ -1,0 +1,63 @@
+<view>
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" bindtap="ok"></view>
+  <view class="section1" bindtap="redirectToHeadPortrait">
+    <text class="sectiontext">头像</text>
+    <image class="uimgstyle" src="{{user.headPortrait}}" />
+    <image class="tl" src="/image/user/right_arrow.png" />
+  </view>
+
+  <view class="section" bindtap="redirectToUname">
+    <text class="sectiontext">昵称</text>
+    <text class="uInformationStyle1">{{user.username}}</text>
+    <image class="tl" src="/image/user/right_arrow.png" />
+  </view>
+
+  <view class="section" bindtap="redirectToGender">
+    <text class="sectiontext"> 性别</text>
+    <text class="uInformationStyle1">{{user.gender}}</text>
+    <image class="tl" src="/image/user/right_arrow.png" />
+  </view>
+
+  <view class="section" bindtap="redirectToQuotations">
+    <text class="sectiontext"> 心情语录</text>
+    <text class="uInformationStyle2">{{user.quotations}}</text>
+    <image class="tl" src="/image/user/right_arrow.png" />
+  </view>
+
+  <view class="section" bindtap="redirectToCity">
+    <text class="sectiontext"> 地区</text>
+    <image class="tl" src="/image/user/right_arrow.png" />
+    <text class="uInformationStyle1">{{user.regional}}</text>
+  </view>
+
+  <view class="section" bindtap="redirectToDetailedAddress">
+    <text class="sectiontext">详细地址信息</text>
+    <image class="tl" src="/image/user/right_arrow.png" />
+  </view>
+
+  <view class="section" bindtap="redirectToReceiveAddress">
+    <text class="sectiontext">收货地址信息</text>
+    <image class="tl" src="/image/user/right_arrow.png" />
+  </view>
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <!-- <view class="modalDlg"> -->
+    <!-- 二维码或其他图片 -->
+    <text class="unamestyle">性别</text>
+
+    <view class="genderStyle">
+      <label>
+        <view class="genderStyle2" bindtap="choiceGender">
+          <image src="{{gender == true ? '/image/user/man2.png' : '/image/user/man1.png'}}" style="width: 100rpx; height: 100rpx;" />
+          <text class="genderText">男</text>
+        </view>
+      </label>
+      <label>
+        <view class="genderStyle2" bindtap="choiceGender">
+          <image src="{{gender == false ? '/image/user/woman2.png' : '/image/user/woman1.png'}}" style="width: 100rpx; height: 100rpx;" />
+          <text class="genderText">女</text>
+        </view>
+      </label>
+    </view>
+    <!-- <view bindtap="ok" class="ok">好的</view> -->
+  </view>
+</view>

@@ -1,0 +1,191 @@
+page {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.rowstyle {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-top: 40rpx;
+  /* border: 2rpx solid#ddd; */
+}
+
+.headstyle1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headstyle1 image {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 20rpx;
+}
+
+.headstyle2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headstyle2_text1 {
+  font-size: 50rpx;
+}
+
+.headstyle2_text2 {
+  font-size: 30rpx;
+}
+
+.rechargestyle {
+  font-size: 30rpx;
+  margin: 25rpx;
+}
+
+.upperstyle {
+  display: flex;
+  /* border: 2rpx solid#eee; */
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.upperstyle1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 175rpx;
+  height: 150rpx;
+  margin: 30rpx;
+  border: 2rpx solid#eee;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+.upperstyle1_text1 {
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+}
+
+.upperstyle1_text2 {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.lowerstyle1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lowerstyle1_btn {
+  width: 600rpx;
+  height: 80rpx;
+  background: #fed12d;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 40rpx;
+  margin: 40rpx auto;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+.lowerstyle1_font {
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  color: #999;
+}
+
+.line {
+  width: 100%;
+  height: 20rpx;
+  background-color: #eee;
+}
+
+.lowerstyle2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.lowerstyle2_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; *//* border: 2rpx solid#eee; */
+}
+
+.lowerstyle2_font {
+  font-size: 30rpx;
+}
+
+.lowerstyle2_img {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+
+.radio {
+  position: absolute;
+  right: 30rpx;
+  border-radius: 50%;
+  width: 35rpx; /* 最好是4的倍数，不然会不在中间 */
+  height: 35rpx;
+  border: 2rpx solid #999; /* 设置边框（外圆） */
+  font-size: 0; /* 让边框重合 */
+}
+
+.radio .wx-radio-input.wx-radio-input-checked::before {
+  border-radius: 50%;
+  width: 20rpx;
+  height: 20rpx;
+  text-align: center;
+  font-size: 0rpx; /* 对勾大小 去掉 */
+  background-color: #f00;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.radio .wx-radio-input {
+  border-radius: 50%;
+  width: 35rpx;
+  height: 35rpx;
+  border: none; /* 替换边框（隐藏原有边框） */
+}
+
+.paymentstyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; *//* border: 2rpx solid#eee; */
+}
+
+.paymentstyle_text {
+  color: #df4521;
+  font-size: 60rpx;
+  margin: 20rpx;
+}
+
+.paymentstyle_btn1 {
+  width: 200rpx;
+  height: 70rpx;
+  background: #fed12d;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-left: 160rpx;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}
+
+.paymentstyle_btn2 {
+  width: 200rpx;
+  height: 70rpx;
+  background: #f1f1f1;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-left: 50rpx;
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}

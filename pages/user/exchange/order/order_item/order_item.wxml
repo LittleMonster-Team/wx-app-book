@@ -1,0 +1,24 @@
+<block wx:for="{{orderList}}" wx:key="item" wx:for-item="orderItem">
+  <view class="orderStyle">
+    <image src="{{orderItem.orderItems[0].commodityPic}}" class="orderImg" />
+    <view class="orderDetails1">
+      <view class="orderName">{{orderItem.orderItems[0].commodityName}}</view>
+      <view class="orderDetails2">
+        <view class="orderPrice">积分：{{orderItem.orderItems[0].commodityPrice}}</view>
+        <view class="orderNum">数量：{{orderItem.orderItems[0].commodityQuantity}}</view>
+      </view>
+    </view>
+    <image src="/image/user/dividingLine.png" class="dividingLine" />
+    <block wx:if="{{orderItem.status == 0}}">
+      <view class="cancelOrder">
+        <text class="cancel" bindtap="cancelOrder" data-orderid="{{orderItem.id}}">取消订单</text>
+        <text class="payment" bindtap="payment" data-orderid="{{orderItem.id}}">付款</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="deleteOrder">
+        <text bindtap="cancelOrder" data-orderid="{{orderItem.id}}" class="delete">删除订单</text>
+      </view>
+    </block>
+  </view>
+</block>

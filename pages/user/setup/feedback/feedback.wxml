@@ -1,0 +1,25 @@
+<view>
+
+  <view class="section" bindtap="redirectToAccountSecurity">
+    <text class="sectiontext">问题与描述</text>
+    <text class="textstyle"> {{textareaLength}}/400字</text>
+  </view>
+
+  <view>
+    <form bindsubmit="bindFormSubmit">
+      <view class="feedbackStyle">
+        <textarea name="textarea" placeholder="文字描述最少需要50字或多于50字" maxlength="400" bindinput="textareaChange" placeholder-class="placeholderStyle" class="textareaStyle"/>
+
+        <view class="question-images">
+          <block class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="item">
+            <image src="{{item}}" data-index="{{index}}" bindtap="previewImg" class="q-image" catchlongpress="deleteImg" />
+          </block>
+        </view>
+
+        <image src="/image/user/feedback.png" class="feedbackImage" bindtap="chooseImg" wx:if="{{imgs.length<5}}" />
+        <text class="feedbackText">{{imgs.length}}/5张</text>
+      </view>
+      <button form-type="submit" class="submit"> 提交 </button>
+    </form>
+  </view>
+</view>

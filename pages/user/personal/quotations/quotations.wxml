@@ -1,0 +1,6 @@
+<view class="inputStyle2">
+  <input placeholder='美好的一天，从这开始' class="inputStyle" type="text" bindinput="bindKeyInput" value="{{inputValue}}" maxlength="50"/>
+  <icon size='30rpx' type='clear' wx:if="{{deleteIcon}}" bindtap="iconClick" />
+</view>
+
+<view bindtap="changeQuotations" class="confirm">确认修改</view>

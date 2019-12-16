@@ -1,0 +1,120 @@
+<view>
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" bindtap="closePopup"></view>
+  <view class="rowstyle">
+    <block wx:if="{{userLogStyle==false}}">
+      <view bindtap="redirectToLogin" class="userinfo">
+        <image src="" class="userinfo-avatar1" />
+        <view class="gift">
+          <text class="loginstyle">登录/注册</text>
+          <text class="giftstyle">新人注册领好礼</text>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="userinfo">
+        <image src="{{user.headPortrait}}" class="userinfo-avatar2" bindtap="redirectToUser" />
+        <view class="gift">
+          <text class="loginstyle">{{user.username}}</text>
+          <view bindtap="navigateTolatelyplay">
+            <text class="giftstyle">关注：{{followNum}}人</text>
+            <text class="giftstyle" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+            <text class="giftstyle">粉丝：{{fansNum}}人</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{checkinstatus=='未签到'}}">
+      <view class="signin1" bindtap="redirectToGender">
+        <image src="/image/user/signin.png" class="signinimage" />
+        <text class="giftstyle">签到领积分</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="signin2" bindtap="redirectToIntegral">
+        <view class="signin3">
+          <image src="/image/user/checkin.png" class="signinimage" />
+          <text class="giftstyle">已签到</text>
+        </view>
+        <text class="giftstyle2">我的积分</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="choice">
+    <view class="choice_centered" bindtap="redirectTolatelyplay">
+      <image src="/image/index/fenlei1.png" class="choiceimage" />
+      <text class="choice_font">最近播放</text>
+    </view>
+
+    <view class="choice_centered" bindtap="redirectTocollection">
+      <image src="/image/index/fenlei2.png" class="choiceimage" />
+      <text class="choice_font">我的收藏</text>
+    </view>
+    <view class="choice_centered" bindtap="redirectTopurchase">
+      <image src="/image/index/fenlei3.png" class="choiceimage" />
+      <text class="choice_font">我的购买</text>
+    </view>
+    <view class="choice_centered" bindtap="redirectTodownload">
+      <image src="/image/index/fenlei4.png" class="choiceimage" />
+      <text class="choice_font">我的下载</text>
+    </view>
+  </view>
+
+  <view class="sections">
+    <view class="section" bindtap="redirectToExchange">
+      <image src="/image/user/mycommodity.png" class="sectionimage" />
+      <text class="sectiontext">兑换中心</text>
+      <image class="tl" src="/image/user/right_arrow.png" />
+    </view>
+    <view class="section" bindtap="redirectToMycommodity">
+      <image src="/image/user/baobean.png" class="sectionimage" />
+      <text class="sectiontext">我的宝豆</text>
+      <image class="tl" src="/image/user/right_arrow.png" style="" />
+    </view>
+    <view class="section" bindtap="redirectToMyGift">
+      <image src="/image/user/exchange.png" class="sectionimage" />
+      <text class="sectiontext">我的兑换</text>
+      <image class="tl" src="/image/user/right_arrow.png" />
+    </view>
+    <view class="section" bindtap="redirectToWallet">
+      <image src="/image/user/wallet.png" class="sectionimage" />
+      <text class="sectiontext"> 我的钱包</text>
+      <image class="tl" src="/image/user/right_arrow.png" />
+    </view>
+    <view class="section" bindtap="redirectToOrder">
+      <image src="/image/user/order.png" class="sectionimage" />
+      <text class="sectiontext"> 我的订单</text>
+      <image class="tl" src="/image/user/right_arrow.png" />
+    </view>
+    <view class="section" bindtap="redirectToAboutus">
+      <image src="/image/user/aboutus.png" class="sectionimage" />
+      <text class="sectiontext"> 关于我们</text>
+      <image class="tl" src="/image/user/right_arrow.png" />
+    </view>
+    <view class="section" bindtap="redirectToSetup">
+      <image src="/image/user/setup.png" class="sectionimage" />
+      <text class="sectiontext">设置</text>
+      <image class="tl" src="/image/user/right_arrow.png" />
+    </view>
+  </view>
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <!-- <view class="modalDlg"> -->
+    <!-- 二维码或其他图片 -->
+    <text class="integraltext">签到</text>
+    <view class="integralstyle1">
+      <text>+{{integral}}</text>
+      <image src="/image/user/integral.png" style=" width: 40rpx;height: 40rpx;margin-left: 10rpx;" />
+    </view>
+
+    <view class="integralstyle2">
+      <view wx:for="{{qiandaoList}}" wx:key="index" wx:for-index="idx" wx:for-item="item">
+        <view class="integralstyle3">
+          <image src="{{item == 1 ? '/image/user/signin_yes.png' :'/image/user/signin_no.png'}}" data-item="{{item}}" data-id="{{idx+1}}" bindtap="modifyState" />
+          <text>周{{idx+1}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view bindtap="closePopup" class="closePopup">知 道 了</view>
+  </view>
+</view>

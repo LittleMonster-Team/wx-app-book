@@ -1,0 +1,119 @@
+<view wx:if="{{isHide}}">
+  <view wx:if="{{canIUse}}">
+    <view class='header'>
+      <image src='/image/login/weixin.png'></image>
+    </view>
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+
+<view wx:else>
+  <view>
+    <view class='search'>
+      <block wx:if="{{userLogStyle==false}}">
+        <image src="" class="userinfo-avatar1" bindtap="redirectToLogin" />
+      </block>
+      <block wx:else>
+        <image src="{{user.headPortrait}}" class="userinfo-avatar2" bindtap="navigateToUserDetails" />
+      </block>
+      <view class="inputStyle2">
+        <input placeholder='搜索' class="inputStyle" type="text" bindinput="bindKeyInput" value="{{inputValue}}" placeholder-class="placeholderStyle" />
+        <icon size='30rpx' type='clear' wx:if="{{deleteIcon}}" bindtap="iconClick" class="iconStyle" />
+        <icon size='30rpx' type='search'></icon>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <swiper class='swiperClass' previous-margin="70rpx" next-margin="70rpx" circular bindchange="bindchange" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{newestList}}" wx:key="item" wx:if="{{index<5}}">
+        <swiper-item>
+          <image src="{{item.bookCover}}" class="slide-image {{currentIndex == index ? 'active' : 'quiet'}}" mode='scaleToFill' data-id="{{item.id}}" bindtap="redirectToDetails">
+          </image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="choice">
+    <view class="choice_centered" bindtap="mustlistenurl">
+      <image src="/image/index/fenlei1.png" class="choiceimage" />
+      <text class="choiceText">必听</text>
+    </view>
+
+    <view class="choice_centered" bindtap="rankingurl">
+      <image src="/image/index/fenlei2.png" class="choiceimage" />
+      <text class="choiceText">榜单</text>
+    </view>
+    <view class="choice_centered" bindtap="classificationurl">
+      <image src="/image/index/fenlei3.png" class="choiceimage" />
+      <text class="choiceText">全部分类</text>
+    </view>
+    <view class="choice_centered" bindtap="sendSubscribeMsg">
+      <image src="/image/index/fenlei4.png" class="choiceimage" />
+      <text class="choiceText">基础教学</text>
+    </view>
+
+  </view>
+  <view class='rowstyle'>
+    <image src="/image/index/meirituijian.jpg" class="labelimage" />
+    <text class="labelStyle">每日推荐</text>
+    <view class='more' bindtap="recommendurl">更多></view>
+  </view>
+
+  <view>
+    <view class='recommendrowstyle' data-id="{{recommendBook.id}}" bindtap="redirectToDetails">
+      <image src="{{recommendBook.bookCover}}" class="recommendimage" mode="scaleToFill" />
+      <view class="recommendedcontent">
+        <view class="recommendedcontent2">
+          <text class="recommendedtitle1">{{recommendBook.bookName}}</text>
+          <text class="recommendedtitle2" decode="{{true}}">作者：{{recommendBook.bookAuthor}}</text>
+        </view>
+        <text class="recommendationdetails">{{recommendBook.bookSynopsis}}</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='rowstyle'>
+    <image src="/image/index/zuixinshangjia.png" class="labelimage" />
+    <text class="labelStyle">最新上架</text>
+    <view class='more' bindtap="newarrivalurl">更多></view>
+  </view>
+
+  <view class='newrowstyle'>
+    <block wx:for="{{newestList}}" wx:key="item" wx:if="{{index<3}}">
+      <view class="new_centered">
+        <image src="{{item.bookCover}}" class="newimage" data-id="{{item.id}}" bindtap="redirectToDetails" />
+        <view class="authorStyle">
+          <text class="author">{{item.bookName}}</text>
+        </view>
+        <text class="author">作者：{{item.bookAuthor}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class='rowstyle'>
+    <image src="/image/index/cainixihuan.png" class="labelimage" />
+    <text class="labelStyle">猜你喜欢</text>
+    <view class='more' bindtap="youlikeurl">更多></view>
+  </view>
+
+  <view class='newrowstyle'>
+    <block wx:for="{{likeList}}" wx:key="item" wx:if="{{index<3}}">
+      <view class="new_centered">
+        <image src="{{item.bookCover}}" class="newimage" data-id="{{item.id}}" bindtap="redirectToDetails" />
+        <view class="authorStyle">
+          <text class="author">{{item.bookName}}</text>
+        </view>
+        <text class="author">作者：{{item.bookAuthor}}</text>
+      </view>
+    </block>
+  </view>
+</view>

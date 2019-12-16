@@ -1,0 +1,130 @@
+/* pages/user/integral/integral.wxss */
+
+.integralHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.integralHeadText1 {
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.integralHeadText2 {
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.integralHeadBtn {
+  width: 180rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #fff3c7; */
+  color: #a07b00;
+  border: 1rpx solid #a07b00;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+}
+
+.integralBody1 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 50rpx;
+  margin: 30rpx;
+  padding: 30rpx;
+}
+
+.integralBody2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.integralBody3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.integralBodyText1 {
+  font-size: 30rpx;
+}
+
+.integralBodyText2 {
+  font-size: 25rpx;
+}
+
+.integralBodyImg {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+
+.integralFoot1 {
+  margin: 30rpx;
+}
+
+.integralFootImg {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.integralFootText1 {
+  font-size: 30rpx;
+}
+
+.integralFoot2 {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+}
+
+.integralFoot3 {
+  margin: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.integralFootText2 {
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.integralFootText3 {
+  font-size: 25rpx;
+  color: #9b9b9b;
+  margin-bottom: 10rpx;
+}
+
+.integralFootText4 {
+  font-size: 25rpx;
+  color: #a57400;
+}
+
+.integralFootBtn {
+  position: absolute;
+  right: 50rpx;
+  width: 180rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #fff3c7; */
+  color: #a07b00;
+  border: 1rpx solid #a07b00;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+}
+
+.line {
+  height: 2rpx;
+  background-color: #f1f1f1;
+}

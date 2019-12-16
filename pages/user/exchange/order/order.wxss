@@ -1,0 +1,261 @@
+/* pages/user/exchange/order/order.wxss */
+
+.addressStyle {
+  padding: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  border-radius: 20rpx;
+}
+
+.addressImg {
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.userClass1 {
+  width: 500rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.userClass2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userName {
+  font-size: 30rpx;
+  margin-right: 20rpx;
+}
+
+.userPhone {
+  font-size: 20rpx;
+  color: #aaa;
+}
+
+.region {
+  margin-top: 10rpx;
+  font-size: 20rpx;
+}
+
+.tl {
+  position: absolute;
+  left: 90%;
+  color: #aaa;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.information {
+  margin: 10rpx;
+  padding: 10rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+
+.peisong {
+  font-size: 20rpx;
+  color: #aaa;
+}
+
+.fapiao {
+  font-size: 20rpx;
+  color: #aaa;
+}
+
+.beizhu {
+  font-size: 20rpx;
+  color: #aaa;
+}
+
+.orderStyle {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  /* border: 2rpx solid#aaa; */
+}
+
+.orderImg {
+  width: 150rpx;
+  height: 100rpx;
+}
+
+.orderDetails1 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+}
+
+.orderName {
+  width: 350rpx;
+  height: 60rpx;
+  font-size: 20rpx;
+  color: #aaa;
+  margin: 10rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.orderDetails2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+  margin-left: 70rpx;
+}
+
+.orderPrice {
+  font-size: 20rpx;
+  color: #aaa;
+}
+
+.orderNum {
+  font-size: 20rpx;
+  color: #aaa;
+}
+
+.introduce {
+  margin-left: 50rpx;
+  font-size: 20rpx;
+}
+
+.buy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.commodity_details_number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2rpx solid#aaa;
+  position: relative;
+  left: 350rpx;
+}
+
+.reduceNum {
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #f1f1f1;
+  margin-left: 2rpx;
+  border-right: 2rpx solid#aaa;
+}
+
+.plusNum {
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #f1f1f1;
+  margin-left: 2rpx;
+  border-left: 2rpx solid#aaa;
+}
+
+.buyNum {
+  font-size: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  height: 40rpx;
+  margin-left: 2rpx;
+}
+
+.valuation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40rpx;
+  position: relative;
+  left: 450rpx;
+}
+
+.valuationNum {
+  font-size: 20rpx;
+  color: #aaa;
+  margin-right: 10rpx;
+}
+
+.valuationText {
+  font-size: 25rpx;
+  margin-right: 20rpx;
+}
+
+.valuationPrice {
+  font-size: 20rpx;
+  color: #fed12d;
+}
+
+.submission {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 200rpx;
+}
+
+.subNum {
+  font-size: 25rpx;
+  color: #aaa;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+}
+
+.subText {
+  font-size: 30rpx;
+  margin-right: 15rpx;
+}
+
+.subPrice {
+  font-size: 30rpx;
+  color: #fed12d;
+  margin-right: 40rpx;
+}
+
+.subBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  width: 150rpx;
+  height: 50rpx;
+  background-color: #fed12d;
+  /* border: 2rpx solid red; */
+  border-radius: 30rpx 0rpx 30rpx 30rpx;
+}

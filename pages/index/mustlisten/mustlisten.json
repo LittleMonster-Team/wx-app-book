@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "必听",
+  "usingComponents": {
+    "BookList": "/component/book_list/book_list"
+  }
+}

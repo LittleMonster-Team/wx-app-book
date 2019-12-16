@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "最新上架",
+  "usingComponents": {
+    "RankingList": "/component/ranking_list/ranking_list"
+  }
+}

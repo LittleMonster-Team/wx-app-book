@@ -1,0 +1,109 @@
+/* pages/story_details/comment_reply/comment_reply.wxss */
+
+.findWhole {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+  background-color: white;
+}
+
+.findBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.findUser {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20rpx;
+}
+
+.findUserImg {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+}
+
+.findUserName {
+  font-size: 35rpx;
+}
+
+.findUsercontent {
+  margin-left: 25rpx;
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+}
+
+.findFoot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 25rpx;
+}
+
+.findFootTime {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.findFootImg {
+  position: absolute;
+  right: 50rpx;
+}
+
+/* +++++++++++++ */
+
+.replyStyle {
+  font-size: 30rpx;
+  color: #999;
+  margin: 20rpx;
+}
+
+/* +++++++++++++ */
+
+.commentStyle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 30rpx;
+  position: fixed;
+  bottom: 0;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  background-color: white;
+}
+
+.inputStyle {
+  background-color: #f1f1f1;
+  width: 90%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+  margin-right: 20rpx;
+}
+
+.placeholderStyle {
+  font-size: 25rpx;
+}
+
+.weui-input {
+  margin-left: 50rpx;
+  margin-right: 20rpx;
+  width: 80%;
+  height: 80rpx;
+  font-size: 30rpx;
+}
+
+.sendOut {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.placeholder-view {
+  width: 100%;
+  height: 100rpx;
+}

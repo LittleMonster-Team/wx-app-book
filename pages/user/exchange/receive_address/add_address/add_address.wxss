@@ -1,0 +1,80 @@
+.inputStyle {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  border: 2rpx solid #eee;
+  margin-top: 20rpx;
+}
+
+.weui-input {
+  width: 85%;
+  height: 80rpx;
+  font-size: 30rpx;
+  /* border: 2rpx solid #eee; */
+}
+
+.addressStyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  height: 80rpx;
+  background-color: white;
+}
+
+.collectStyle {
+  font-size: 25rpx;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+}
+
+.regionStyle {
+  font-size: 25rpx;
+}
+
+.detailedStyle {
+  margin-top: 20rpx;
+  background-color: white;
+  height: 150rpx;
+}
+
+.weui-textarea {
+  padding-top: 20rpx;
+  margin-left: 40rpx;
+  font-size: 30rpx;
+  width: 80%;
+  height: 80%;
+}
+
+.defaultStyle {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin-top: 20rpx;
+  height: 80rpx;
+  align-items: center;
+}
+
+.default {
+  margin-left: 40rpx;
+}
+
+.switchStyle {
+  position: absolute;
+  left: 85%;
+  width: 35rpx;
+  height: 35rpx;
+}
+.preservation {
+  width: 400rpx;
+  height: 70rpx;
+  background: #fed12d;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 35rpx;
+  margin: 40rpx auto;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+}

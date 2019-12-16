@@ -1,0 +1,10 @@
+<view>
+  <view class="classification">
+    <text class="sort" bindtap="selectGuoxueBook" style="background-color: {{bgcolor1}}"> 国学经典 </text>
+    <text class="sort" bindtap="selectGushiciBook" style="background-color: {{bgcolor2}}"> 古诗词 </text>
+    <text class="sort" bindtap="selectYishuBook" style="background-color: {{bgcolor3}}"> 艺术 </text>
+  </view>
+
+  <RankingList rankingList='{{rankingList}}'></RankingList>
+
+</view>

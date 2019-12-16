@@ -1,0 +1,30 @@
+.inputStyle2 {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* width:580rpx; */
+  height: 80rpx;
+  /* border-radius: 50rpx 0rpx 50rpx 50rpx; */
+  border: 2rpx solid #eee;
+  margin-top: 20rpx;
+}
+
+.inputStyle {
+  width: 85%;
+  height: 80rpx;
+  font-size: 30rpx;
+  /* border: 2rpx solid #eee; */
+}
+.confirm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500rpx;
+  height: 80rpx;
+  background: #FED12D;
+  font-size: 30rpx;
+  margin: 20px auto;
+  border-radius: 50rpx 0rpx 50rpx 50rpx;
+}
