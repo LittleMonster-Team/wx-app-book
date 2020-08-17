@@ -1,0 +1,29 @@
+<!-- <view>
+  <view class='search'>
+    <block wx:if="{{userLogStyle==false}}">
+      <image src="" class="userinfo-avatar1" bindtap="redirectToLogin" />
+    </block>
+    <block wx:else>
+      <image src="{{user.headPortrait}}" class="userinfo-avatar2" bindtap="navigateToUserDetails" />
+    </block>
+    <view class="inputStyle2">
+      <input placeholder='搜索' class="inputStyle" type="text" bindinput="bindKeyInput" value="{{inputValue}}" placeholder-class="placeholderStyle" bindfocus="search" />
+      <icon size='30rpx' type='clear' wx:if="{{deleteIcon}}" bindtap="iconClick" class="iconStyle" />
+      <icon size='30rpx' type='search'  bindtap="search"></icon>
+    </view>
+  </view>
+</view> -->
+<view>
+  <view class='search'>
+    <block wx:if="{{userLogStyle==false}}">
+      <image src="" class="userinfo-avatar1" bindtap="redirectToLogin" />
+    </block>
+    <block wx:else>
+      <image src="{{user.headPortrait}}" class="userinfo-avatar2" bindtap="navigateToUserDetails" />
+    </block>
+    <view class="searchStyle2" bindtap="search">
+      <view class="searchStyle">搜索</view>
+      <icon size='30rpx' type='search'></icon>
+    </view>
+  </view>
+</view>
